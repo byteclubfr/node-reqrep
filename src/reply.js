@@ -34,7 +34,7 @@ export default class Request extends EventEmitter {
 
         this._push._queue = options.queue + "replies:" + id;
         this._push.write(result);
-      });
+      }, id);
     });
   }
 
