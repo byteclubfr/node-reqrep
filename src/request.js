@@ -24,10 +24,10 @@ export default class Request extends EventEmitter {
     });
   }
 
-  send (job, cb) {
+  send (job, cb, onPushed) {
     var id = uuid();
 
-    this._push.write([id, job]);
+    this._push.write([id, job], onPushed);
 
     var pull = new Pull(merge({}, this._options, {"queue": this._options.queue + "replies:" + id}));
 
