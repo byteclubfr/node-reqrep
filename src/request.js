@@ -40,12 +40,18 @@ export default class Request extends EventEmitter {
 
     pull.once("error", (err) => {
       cleanup();
-      cb(err);
+      if (cb) {
+        cb(err);
+      } else {
+        this.emit("error", err);
+      }
     });
 
     pull.once("data", (reply) => {
       cleanup();
-      cb(null, reply);
+      if (cb) {
+        cb(null, reply);
+      }
     });
   }
 
