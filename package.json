@@ -1,0 +1,47 @@
+{
+  "name": "reqrep",
+  "version": "1.0.0",
+  "description": "Request/Reply pattern using Redis as backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --check-leaks",
+    "prepublish": "babel --source-maps --out-dir lib src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmtm/node-reqrep.git"
+  },
+  "keywords": [
+    "redis",
+    "push",
+    "pull",
+    "request",
+    "reply",
+    "req",
+    "rep",
+    "publish",
+    "subscribe",
+    "worker",
+    "slave",
+    "scheduler",
+    "manager",
+    "sender"
+  ],
+  "author": "Nicolas Chambrier <naholyr@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmtm/node-reqrep/issues"
+  },
+  "homepage": "https://github.com/lmtm/node-reqrep",
+  "devDependencies": {
+    "babel": "^4.3.0",
+    "expect": "^1.6.0",
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "lodash": "^3.2.0",
+    "pushpull": "^2.1.0",
+    "redis": "^0.12.1",
+    "uuid": "^2.0.1"
+  }
+}
